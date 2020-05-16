@@ -21,5 +21,7 @@ db.once('open', () => console.log("Connected to Mongoose"))
 console.log(process.env.DATABASE_URL)
 
 app.use('/', indexRouter)
+app.use('/authors', authorRouter)
+'authors/new'
 
 app.listen(process.env.PORT || 3000)
